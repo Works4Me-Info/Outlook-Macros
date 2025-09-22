@@ -6,7 +6,6 @@ Sub Coffee_Thanks()
         'DATA----------------------------------------                                                '
         Dim CoffeeAmount As String                                                                   '
         Dim personName As String                                                                     '
-        Dim userName As String                                                                       '
         'TEMPLATE------------------------------------                                                '
         Dim newItem As Outlook.MailItem                                                              '
         'REPLACEMENTS--------------------------------                                                '
@@ -68,4 +67,5 @@ Sub replaceText(wdDoc As Object, findText As String, replaceText As String)
         .Execute Replace:=2 ' 2 = Replace all
     End With
 End Sub
+
 
