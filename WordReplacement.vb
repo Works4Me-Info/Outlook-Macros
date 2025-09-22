@@ -1,4 +1,4 @@
-Sub New_EVE_Case()
+Sub Coffee_Thanks()
     
     '+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
     '  VARIABLES  -----------------------------------------------------------------------------------'
@@ -68,3 +68,4 @@ Sub replaceText(wdDoc As Object, findText As String, replaceText As String)
         .Execute Replace:=2 ' 2 = Replace all
     End With
 End Sub
+
