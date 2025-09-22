@@ -50,7 +50,8 @@ Sub Coffee_Thanks()
 																									 '
 		' Replace all placeholders-------------------                                                '
         olItem.Subject = Replace(olItem.Subject, "[Gift]", CoffeeAmount)                             '
-        Call replaceText(wdDoc, "[Gifter]", personName)                                        '
+        Call replaceText(wdDoc, "[Gifter]", personName)                                              '
+		Call replaceText(wdDoc, "[Gift]", CoffeeAmount)                                              '
     '+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
     
 End Sub
@@ -59,7 +60,7 @@ Sub replaceText(wdDoc As Object, findText As String, replaceText As String)
 	'+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
     '+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
     ' Repeatable loop to replace words in the body, without altering								 '
-    ' the HTML formatting.																				 '
+    ' the HTML formatting.																			 '
 	'+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-'
     With wdDoc.Content.Find
         .Text = findText
@@ -67,5 +68,6 @@ Sub replaceText(wdDoc As Object, findText As String, replaceText As String)
         .Execute Replace:=2 ' 2 = Replace all
     End With
 End Sub
+
 
 
